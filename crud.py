@@ -1,11 +1,13 @@
 import connectiondb as connection
 import re
+import csvfile
 
 print('Please select an option:')
 print('1) Create a new student')
 print("2) Update student's data")
 print('3) Delete student')
 print('4) List of students')
+print('5) Import data and send')
 
 a = int(input('Your option:  '))
 
@@ -148,13 +150,17 @@ if a == 4:
 
         print("\nPrinting each row")
         for row in records:
-            print("idstudent = ", row[0], )
-            print("first_name = ", row[1])
-            print("last_name  = ", row[2])
-            print("middle_name  = ", row[3], )
-            print("iin  = ", row[4], )
-            print("phone  = ", row[5], )
-            print("email  = ", row[6], )
-            print("address  = ", row[7], "\n")
+            # print("idstudent = ", row[0], )
+            # print("first_name = ", row[1])
+            # print("last_name  = ", row[2])
+            # print("middle_name  = ", row[3], )
+            # print("iin  = ", row[4], )
+            # print("phone  = ", row[5], )
+            # print("email  = ", row[6], )
+            # print("address  = ", row[7], "\n")
+            print(row)
     except connection.Error as error:
         print("Error reading data from MySQL table".format(error))
+
+if a == 5:
+    csvfile.sendData()
