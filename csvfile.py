@@ -31,6 +31,6 @@ def send_mail():
     with open("Dump_{today}.csv",'rb') as file:
         msg.attach(MIMEApplication(file.read(), Name=f"Dump_{today}.csv"))
     servrer = smtplib.SMTP("smtp.gmail.com", 587)
-    servrer.login('miko.240067@gmail.com', 'maks0001')
+    servrer.login('miko.240067@gmail.com', 'password')
     servrer.sendmail(msg['From'], msg['To'], msg.as_string())
     servrer.quit()
