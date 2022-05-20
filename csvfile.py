@@ -34,3 +34,5 @@ def send_mail():
     servrer.login('miko.240067@gmail.com', 'password')
     servrer.sendmail(msg['From'], msg['To'], msg.as_string())
     servrer.quit()
+
+    return ('message send')
