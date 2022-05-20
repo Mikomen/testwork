@@ -1,10 +1,10 @@
 import connectiondb
 import createtable
 import crud
+import csvfile
 
-def print_hi(name):
-    print(f'Hi, {name}')
+def main():
+    csvfile.send_mail()
 
 if __name__ == '__main__':
-    # print_hi('PyCharm')
-    pass
+    main()
